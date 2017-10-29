@@ -67,6 +67,7 @@ namespace TagLib.Id3v2 {
 		public static readonly ReadOnlyByteVector TPE2 = "TPE2";
 		public static readonly ReadOnlyByteVector TPE3 = "TPE3";
 		public static readonly ReadOnlyByteVector TPE4 = "TPE4";
+		public static readonly ReadOnlyByteVector TPUB = "TPUB"; // Publisher
 		public static readonly ReadOnlyByteVector TPOS = "TPOS";
 		public static readonly ReadOnlyByteVector TRCK = "TRCK";
 		public static readonly ReadOnlyByteVector TRDA = "TRDA";
@@ -89,6 +90,6 @@ namespace TagLib.Id3v2 {
 		public static readonly ReadOnlyByteVector WORS = "WORS";
 		public static readonly ReadOnlyByteVector WPAY = "WPAY";
 		public static readonly ReadOnlyByteVector WPUB = "WPUB";
-		public static readonly ReadOnlyByteVector WXXX = "WXXX";
+		public static readonly ReadOnlyByteVector WXXX = "WXXX";		
 	}
 }

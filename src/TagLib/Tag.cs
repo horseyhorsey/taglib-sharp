@@ -834,6 +834,15 @@ namespace TagLib {
 		}
 
 		/// <summary>
+		/// Gets or Sets the Publisher / Label
+		/// </summary>
+		public virtual string Publisher
+		{
+			get { return string.Empty; }
+			set { }
+		}
+
+		/// <summary>
 		///    Gets and sets the ReplayGain track gain in dB.
 		/// </summary>
 		/// <value>

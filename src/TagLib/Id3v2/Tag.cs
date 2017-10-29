@@ -2076,6 +2076,14 @@ namespace TagLib.Id3v2 {
 		}
 
 		/// <summary>
+		/// Gets or sets the Publisher from <see cref="FrameType.TPUB"/>
+		/// </summary>
+		public override string Publisher
+		{
+			get => GetTextAsString(FrameType.TPUB);
+			set => SetTextFrame(FrameType.TPUB, value);
+		}
+		/// <summary>
 		///    Gets and sets a collection of pictures associated with
 		///    the media represented by the current instance.
 		/// </summary>
