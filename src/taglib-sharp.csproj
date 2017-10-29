@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>A library for reading and writing audio metatags.</Description>
-    <Version>2.1.0.1</Version>
+    <Version>2.1.0.2</Version>
     <Copyright>Copyright (c) 2006-2007 Brian Nickel.  Copyright (c) 2009-2010 Other contributors</Copyright>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>taglib-sharp.snk</AssemblyOriginatorKeyFile>

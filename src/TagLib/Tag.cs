@@ -843,6 +843,15 @@ namespace TagLib {
 		}
 
 		/// <summary>
+		/// Gets or Sets the Musical Key
+		/// </summary>
+		public virtual string TKey
+		{
+			get { return string.Empty; }
+			set { }
+		}
+
+		/// <summary>
 		///    Gets and sets the ReplayGain track gain in dB.
 		/// </summary>
 		/// <value>

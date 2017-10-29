@@ -2083,6 +2083,16 @@ namespace TagLib.Id3v2 {
 			get => GetTextAsString(FrameType.TPUB);
 			set => SetTextFrame(FrameType.TPUB, value);
 		}
+
+		/// <summary>
+		/// Gets or sets the Musical Key from <see cref="FrameType.TKEY"/>
+		/// </summary>
+		public override string TKey
+		{
+			get => GetTextAsString(FrameType.TKEY);
+			set => SetTextFrame(FrameType.TKEY, value);
+		}
+
 		/// <summary>
 		///    Gets and sets a collection of pictures associated with
 		///    the media represented by the current instance.
