@@ -441,7 +441,7 @@ namespace TagLib.Mpeg {
 		/// </remarks>
 		public TimeSpan Duration {
 			get {
-				if (duration > TimeSpan.Zero)
+				if (duration >= TimeSpan.Zero)
 					return duration;
 					
 				if (xing_header.TotalFrames > 0) {
