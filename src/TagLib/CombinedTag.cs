@@ -395,6 +395,32 @@ namespace TagLib {
 			}
 		}
 
+		public override string DiscogsId
+		{
+			get
+			{
+				foreach (Tag tag in tags)
+				{
+					if (tag == null)
+						continue;
+
+					string value = tag.DiscogsId;
+
+					if (value != null)
+						return value;
+				}
+
+				return null;
+			}
+
+			set
+			{
+				foreach (Tag tag in tags)
+					if (tag != null)
+						tag.DiscogsId = value;
+			}
+		}
+
 		/// <summary>
 		///    Gets and sets the sort names for the band or artist who
 		///    is credited in the creation of the entire album or

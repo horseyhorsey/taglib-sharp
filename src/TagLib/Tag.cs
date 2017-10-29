@@ -852,6 +852,15 @@ namespace TagLib {
 		}
 
 		/// <summary>
+		/// Gets or Sets the Discogs Release Id
+		/// </summary>
+		public virtual string DiscogsId
+		{
+			get { return null; }
+			set { }
+		}
+
+		/// <summary>
 		///    Gets and sets the ReplayGain track gain in dB.
 		/// </summary>
 		/// <value>

@@ -2093,6 +2093,47 @@ namespace TagLib.Id3v2 {
 			set => SetTextFrame(FrameType.TKEY, value);
 		}
 
+		private string _discogsId = "DISCOGS_RELEASE_ID";
+		/// <summary>
+		/// Gets or sets the Disocgs Id from the UserFrame "DISCOGS-ID"
+		/// </summary>
+		public override string DiscogsId
+		{
+			get {
+
+				//Get a Discogs ID
+				var id = GetDiscogsValue(new string[]
+					{
+						"DISCOGS_RELEASE_ID",
+						"DISCOGSID",
+						"DISCOGS-ID"
+					});
+
+				if (!string.IsNullOrEmpty(id))
+					_discogsId = id;
+				else { _discogsId = "DISCOGS_RELEASE_ID"; }
+
+				return id;
+				}
+			set => SetUserTextAsString(_discogsId, value);
+		}
+
+		private string GetDiscogsValue(string[] discogKeys)
+		{
+			var discogsId = string.Empty;
+
+			//Check all keys for a Discogs ID
+			foreach (var key in discogKeys)
+			{
+				discogsId = GetUserTextAsString(key, false);
+
+				if (!string.IsNullOrEmpty(discogsId))
+					return discogsId;
+			}
+
+			return discogsId;
+		}
+
 		/// <summary>
 		///    Gets and sets a collection of pictures associated with
 		///    the media represented by the current instance.
