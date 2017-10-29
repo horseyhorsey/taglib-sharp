@@ -328,7 +328,7 @@ namespace TagLib {
 		///    <para>When setting the value, it is stored in each child
 		///    tag.</para>
 		/// </remarks>
-		/// <seealso cref="Tag.PerformersSort" />
+		/// <seealso cref="Tag.Publisher" />
 		public override string Publisher
 		{
 			get
