@@ -422,6 +422,46 @@ namespace TagLib {
 		}
 
 		/// <summary>
+		///    Gets or sets the Country of release
+		/// </summary>
+		/// <value>
+		///    A <see cref="string" /> containing the Country
+		/// </value>
+		/// <remarks>
+		///    <para>When getting the value, the child tags are looped
+		///    through in order and the first non-<see langword="null" />
+		///    and non-empty value is returned.</para>
+		///    <para>When setting the value, it is stored in each child
+		///    tag.</para>
+		/// </remarks>
+		/// <seealso cref="Tag.Country" />
+		public override string Country
+		{
+			get
+			{
+				foreach (Tag tag in tags)
+				{
+					if (tag == null)
+						continue;
+
+					string value = tag.Country;
+
+					if (value != null)
+						return value;
+				}
+
+				return null;
+			}
+
+			set
+			{
+				foreach (Tag tag in tags)
+					if (tag != null)
+						tag.Country = value;
+			}
+		}
+
+		/// <summary>
 		///    Gets and sets the sort names for the band or artist who
 		///    is credited in the creation of the entire album or
 		///    collection containing the media described by the

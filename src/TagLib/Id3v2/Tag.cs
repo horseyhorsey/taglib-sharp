@@ -2118,6 +2118,15 @@ namespace TagLib.Id3v2 {
 			set => SetUserTextAsString(_discogsId, value);
 		}
 
+		/// <summary>
+		/// Gets or sets the Country from the UserFrame "COUNTRY"
+		/// </summary>
+		public override string Country
+		{
+			get => GetUserTextAsString("COUNTRY");
+			set => SetUserTextAsString("COUNTRY", value);
+		}
+
 		private string GetDiscogsValue(string[] discogKeys)
 		{
 			var discogsId = string.Empty;

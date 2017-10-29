@@ -861,6 +861,15 @@ namespace TagLib {
 		}
 
 		/// <summary>
+		/// Gets or Sets the Country
+		/// </summary>
+		public virtual string Country
+		{
+			get { return null; }
+			set { }
+		}
+
+		/// <summary>
 		///    Gets and sets the ReplayGain track gain in dB.
 		/// </summary>
 		/// <value>
@@ -1372,6 +1381,18 @@ namespace TagLib {
 			
 			if (overwrite || IsNullOrLikeEmpty (target.Copyright))
 				target.Copyright = Copyright;
+
+			if (overwrite || IsNullOrLikeEmpty(target.Publisher))
+				target.Publisher = Publisher;
+
+			if (overwrite || IsNullOrLikeEmpty(target.TKey))
+				target.TKey = TKey;
+
+			if (overwrite || IsNullOrLikeEmpty(target.DiscogsId))
+				target.DiscogsId = DiscogsId;
+
+			if (overwrite || IsNullOrLikeEmpty(target.Country))
+				target.Country = Country;			
 		}
 		
 		/// <summary>
